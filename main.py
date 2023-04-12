@@ -43,11 +43,8 @@ def parens_match_iterative(mylist):
     False
     """
     ### TODO
-
-    if (iterate(parens_update, 0, mylist)) == 0:
-      return True
-    else:
-      return False
+    
+    return ((iterate(parens_update, 0, mylist)) == 0)
 
 
 def parens_update(current_output, next_input):
@@ -66,11 +63,11 @@ def parens_update(current_output, next_input):
     if (next_input == "("):
       current_output += 1
     
-    elif (next_input == ")") and (current_output <= 0):
-      current_output = -1
-    
     elif (next_input == ")"):
-      current_output = current_output - 1
+        if (current_output <= 0):
+            current_output = -1
+        else:
+            current_output = current_output - 1
     
     return current_output
 
