@@ -100,8 +100,7 @@ def parens_match_scan(mylist):
     ###TODO
     mappedList = list((map(paren_map, mylist)))
     tuple = scan((lambda x,y: x+y), 0, mappedList)
-    x = reduce(min_f, -1, tuple[0])
-    return (x == 0)
+    return (tuple[1]==0)
 
 def scan(f, id_, a):
     """
