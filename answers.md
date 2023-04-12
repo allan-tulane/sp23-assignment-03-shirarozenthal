@@ -14,12 +14,15 @@ Place all written answers from `assignment-03.md` here for easier grading.
 
 
 
+
 - **d.**
 
 The function maps the parens_map function on every element in the list and then implements scan, so
 
 *  W(n) = W(n/2) + n ∈ **O(n)**
 *  S(n) = S(n/2) + 1 ∈ **O(log n)**
+
+
 
 
 - **f.**
